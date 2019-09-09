@@ -1,0 +1,131 @@
+.text-green
+{
+	color: #00C292;
+}
+
+.text-red
+{
+	color: #E46A76;
+}
+
+
+.text-yellow
+{
+	color: yellow;
+}
+
+
+.text-blue
+{
+	color: blue;
+}
+th,td
+{
+	text-align: center !important;
+	
+}
+
+th
+{
+	color: white!important;
+}
+
+thead
+{
+	background-color: #00C292!important;
+	color: white;
+	font-size: 11px;
+	 text-transform: uppercase;
+}
+tbody
+{
+		font-size: 11px;
+}
+
+.input-group-addon {
+    padding: 6px 12px!important;
+    font-size: 14px!important;
+    font-weight: 400!important;
+    line-height: 1!important;
+    color: #eeeeee!important;
+    text-align: center!important;
+    background-color: #00C292!important;
+    border: 1px solid #00C292!important;
+    
+}
+
+html, body
+{
+  height: 100%!important;
+  margin: 0!important;
+  padding: 0!important;
+}
+
+/* .footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: white;
+  text-align: center;
+} */
+.font-lato
+{
+	display: none!important;
+}
+
+
+.dt-button
+{
+	border-radius: 3px!important;
+	border: 1px solid!transparent;
+	-webkit-box-shadow: 2px 3px 4px 1px rgba(133,126,133,0.74)!important;
+-moz-box-shadow: 2px 3px 4px 1px rgba(133,126,133,0.74)!important;
+box-shadow: 2px 3px 4px 1px rgba(133,126,133,0.74)!important;
+text-transform: uppercase!important;
+color: white!important;
+
+}
+
+.buttons-csv
+{
+	background-color: #00ACD6!important;
+	border-color: #00ACD6!important;
+	font-weight: bold!important;
+	background:#00ACD6!important;
+}
+
+.buttons-pdf
+{
+	background-color: #F55549!important;
+	border-color: #F55549!important;
+	font-weight: bold!important;
+	background:#F55549!important;
+}
+
+
+.buttons-print
+{
+	background-color: #B8E0BA!important;
+	border-color: #B8E0BA!important;
+	font-weight: bold!important;
+	background:#B8E0BA!important;
+}
+.buttons-excel
+{
+	background-color: #FF9800!important;
+	border-color: #B8E0BA!important;
+	font-weight: bold!important;
+	background:#B8E0BA!important;
+}
+
+
+.customList>li {
+    display: inline-block!important;
+    padding-right: 20px!important;
+    padding-left: 20px!important;
+}
+.customList
+{
+	text-align: left!important;
+}
