@@ -31,6 +31,7 @@ import java.util.UUID;
 import java.util.stream.Collectors;
 
 import javax.imageio.ImageIO;
+import javax.jws.soap.SOAPBinding.ParameterStyle;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
@@ -55,6 +56,7 @@ import org.apache.poi.xwpf.usermodel.XWPFHeader;
 import org.apache.poi.xwpf.usermodel.XWPFNumbering;
 import org.apache.poi.xwpf.usermodel.XWPFParagraph;
 import org.apache.poi.xwpf.usermodel.XWPFRun;
+import org.apache.poi.xwpf.usermodel.XWPFRun.FontCharRange;
 import org.apache.poi.xwpf.usermodel.XWPFTable;
 import org.apache.poi.xwpf.usermodel.XWPFTable.XWPFBorderType;
 import org.apache.poi.xwpf.usermodel.XWPFTableCell;
@@ -110,6 +112,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 import org.xlsx4j.sml.Cols;
 
+import com.itextpdf.kernel.pdf.PageLabelNumberingStyleConstants;
 import com.itextpdf.layout.property.VerticalAlignment;
 import com.itextpdf.text.DocWriter;
 import com.itextpdf.text.Document;
@@ -1666,44 +1669,73 @@ public class EmployeeController {
 						String.valueOf(getIndianCurrencyFormat(String
 								.valueOf(Math.round((Float.valueOf(list.get(i).getNewFixedSalaryPerMonth()) * 12)))))
 								+ "/-");
-
+                 
+				//1
+				
 				XWPFParagraph para4 = document.createParagraph();
 				para4.setAlignment(ParagraphAlignment.BOTH);
-				// para4.setNumID(numID);
+			    para4.setNumID(numID);
+			    para4.setIndentationHanging(420);
+				//para4.setFirstLineIndent(-10);
+				para4.setIndentationLeft(520);
 				XWPFRun para4Run = para4.createRun();
-				para4Run.setText("1. " + mainpara4);
+				para4Run.setText(mainpara4);
 				para4Run.setFontFamily("FreightSans Pro Light");
 				para4Run.setFontSize(11);
-
+				
 				String mainpara5 = incrementLetterDetails.getParagraph2().replace("~~performancesalary~~",
 						String.valueOf(getIndianCurrencyFormat(
 								String.valueOf(Math.round(Float.valueOf(list.get(i).getDisbursedVariableZ()))))));
-
+              //2
+				
 				XWPFParagraph para5 = document.createParagraph();
 				para5.setAlignment(ParagraphAlignment.BOTH);
+				para5.setNumID(numID);
+				para5.setIndentationHanging(420);
+				//para5.setFirstLineIndent(-10);
+				para5.setIndentationLeft(520);
 				XWPFRun para5Run = para5.createRun();
-				para5Run.setText("2. " + mainpara5);
+				para5Run.setText( mainpara5);
 				para5Run.setFontFamily("FreightSans Pro Light");
 				para5Run.setFontSize(11);
 
+				//3
 				XWPFParagraph para6 = document.createParagraph();
 				para6.setAlignment(ParagraphAlignment.BOTH);
+				para6.setNumID(numID);
+				para6.setIndentationHanging(420);
+				//para6.setFirstLineIndent(-10);
+				para6.setIndentationLeft(520);
 				XWPFRun para6Run = para6.createRun();
-				para6Run.setText("3. " + incrementLetterDetails.getParagraph3());
+				para6Run.setText( incrementLetterDetails.getParagraph3());
 				para6Run.setFontFamily("FreightSans Pro Light");
 				para6Run.setFontSize(11);
+				
+				//4
 
 				XWPFParagraph para7 = document.createParagraph();
 				para7.setAlignment(ParagraphAlignment.BOTH);
+				para7.setNumID(numID);
+				para7.setIndentationHanging(420);
+				//para7.setFirstLineIndent(-10);
+				para7.setIndentationLeft(520);
 				XWPFRun para7Run = para7.createRun();
-				para7Run.setText("4. " + incrementLetterDetails.getParagraph4());
+				para7Run.setText(incrementLetterDetails.getParagraph4());
 				para7Run.setFontFamily("FreightSans Pro Light");
+				//para7Run.getParagraph().setNumID(numID);
 				para7Run.setFontSize(11);
-				// para7Run.setShadow(true);
+				
+				
+				//5
+				
 				XWPFParagraph para8 = document.createParagraph();
 				para8.setAlignment(ParagraphAlignment.BOTH);
+			    para8.setNumID(numID);
+			    para8.setIndentationHanging(420);
+				//para8.setFirstLineIndent(-10);
+				para8.setIndentationLeft(520);
 				XWPFRun para8Run = para8.createRun();
-				para8Run.setText("5. " + incrementLetterDetails.getParagraph5());
+				para8Run.setText(incrementLetterDetails.getParagraph5());
 				para8Run.setFontFamily("FreightSans Pro Light");
 				para8Run.setFontSize(11);
 				para8.setSpacingAfterLines(200);
