@@ -16,7 +16,7 @@
 		<jstl.version>1.2</jstl.version>
 		<servlet.version>3.1.0</servlet.version>
 
-		<commons-collections.version>3.2.1</commons-collections.version>
+		<commons-collections.version>3.2.2</commons-collections.version>
 
 		<!-- Spring -->
 		<spring-framework.version>4.3.14.RELEASE</spring-framework.version>
